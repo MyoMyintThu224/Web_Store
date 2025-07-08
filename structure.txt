@@ -1,0 +1,136 @@
+.
+├── firebase.json
+├── firestore.indexes.json
+├── frontends
+│   ├── build
+│   │   ├── asset-manifest.json
+│   │   ├── assets
+│   │   │   ├── csv
+│   │   │   │   └── robot_products.csv
+│   │   │   └── images
+│   │   │       ├── batteryanddocker1.jpg
+│   │   │       ├── batteryanddocker2.jpg
+│   │   │       ├── bee.jpg
+│   │   │       ├── camera1.jpg
+│   │   │       ├── camera2.jpg
+│   │   │       ├── camera3.jpg
+│   │   │       ├── casterwheel1.jpg
+│   │   │       ├── cat.jpg
+│   │   │       ├── gps1.jpg
+│   │   │       ├── gps2.jpg
+│   │   │       ├── gps3.jpg
+│   │   │       ├── gps4.jpg
+│   │   │       ├── gps5.jpg
+│   │   │       ├── gpsacc1.jpg
+│   │   │       ├── gpsacc2.jpg
+│   │   │       ├── imu1.jpg
+│   │   │       ├── imu2.jpg
+│   │   │       ├── imu3.jpg
+│   │   │       ├── imu4.jpg
+│   │   │       ├── kilorobot.jpg
+│   │   │       ├── lidar1.jpg
+│   │   │       ├── lidar2.jpg
+│   │   │       ├── lidar3.jpg
+│   │   │       ├── lidar4.jpg
+│   │   │       ├── lidar5.jpg
+│   │   │       ├── motherboard1.jpg
+│   │   │       ├── motherboard2.jpg
+│   │   │       ├── motherboard3.jpg
+│   │   │       ├── motherboard4.jpg
+│   │   │       ├── popo.jpg
+│   │   │       ├── robot_arm.jpg
+│   │   │       ├── robotcontroller.jpg
+│   │   │       ├── shm1.jpg
+│   │   │       ├── shm2.jpg
+│   │   │       └── shmdriver1.jpg
+│   │   ├── favicon.ico
+│   │   ├── index.html
+│   │   ├── logo192.png
+│   │   ├── logo512.png
+│   │   ├── manifest.json
+│   │   ├── robots.txt
+│   │   └── static
+│   │       ├── css
+│   │       │   ├── main.e6c13ad2.css
+│   │       │   └── main.e6c13ad2.css.map
+│   │       └── js
+│   │           ├── 453.8c58e334.chunk.js
+│   │           ├── 453.8c58e334.chunk.js.map
+│   │           ├── main.593418fb.js
+│   │           ├── main.593418fb.js.LICENSE.txt
+│   │           └── main.593418fb.js.map
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── public
+│   │   ├── assets
+│   │   │   └── images
+│   │   │       ├── batteryanddocker1.jpg
+│   │   │       ├── batteryanddocker2.jpg
+│   │   │       ├── bee.jpg
+│   │   │       ├── camera1.jpg
+│   │   │       ├── camera2.jpg
+│   │   │       ├── camera3.jpg
+│   │   │       ├── casterwheel1.jpg
+│   │   │       ├── cat.jpg
+│   │   │       ├── gps1.jpg
+│   │   │       ├── gps2.jpg
+│   │   │       ├── gps3.jpg
+│   │   │       ├── gps4.jpg
+│   │   │       ├── gps5.jpg
+│   │   │       ├── gpsacc1.jpg
+│   │   │       ├── gpsacc2.jpg
+│   │   │       ├── imu1.jpg
+│   │   │       ├── imu2.jpg
+│   │   │       ├── imu3.jpg
+│   │   │       ├── imu4.jpg
+│   │   │       ├── kilorobot.jpg
+│   │   │       ├── lidar1.jpg
+│   │   │       ├── lidar2.jpg
+│   │   │       ├── lidar3.jpg
+│   │   │       ├── lidar4.jpg
+│   │   │       ├── lidar5.jpg
+│   │   │       ├── motherboard1.jpg
+│   │   │       ├── motherboard2.jpg
+│   │   │       ├── motherboard3.jpg
+│   │   │       ├── motherboard4.jpg
+│   │   │       ├── popo.jpg
+│   │   │       ├── robot_arm.jpg
+│   │   │       ├── robotcontroller.jpg
+│   │   │       ├── shm1.jpg
+│   │   │       ├── shm2.jpg
+│   │   │       └── shmdriver1.jpg
+│   │   ├── favicon.ico
+│   │   ├── index.html
+│   │   ├── logo192.png
+│   │   ├── logo512.png
+│   │   ├── manifest.json
+│   │   └── robots.txt
+│   ├── README.md
+│   ├── src
+│   │   ├── App.css
+│   │   ├── App.js
+│   │   ├── App.test.js
+│   │   ├── assets
+│   │   │   └── logo512.png
+│   │   ├── components
+│   │   │   ├── ChatBox.jsx
+│   │   │   ├── MainLayout.jsx
+│   │   │   └── Receipt.jsx
+│   │   ├── data
+│   │   │   └── devices.json
+│   │   ├── firebase.js
+│   │   ├── index.css
+│   │   ├── index.js
+│   │   ├── logo.svg
+│   │   ├── pages
+│   │   │   ├── Home.jsx
+│   │   │   └── Login.jsx
+│   │   ├── reportWebVitals.js
+│   │   └── setupTests.js
+│   └── tailwind.config.js
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+└── structure.txt
+
+16 directories, 117 files
