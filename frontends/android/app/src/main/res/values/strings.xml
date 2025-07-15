@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Rom</string>
+    <string name="title_activity_main">Rom</string>
+    <string name="package_name">com.DeepBlue.webStore</string>
+    <string name="custom_url_scheme">com.DeepBlue.webStore</string>
+</resources>

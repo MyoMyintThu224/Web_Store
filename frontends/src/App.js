@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Receipt from './components/Receipt';
 import MainLayout from "./components/MainLayout";
 import ChatBox from "./components/ChatBox";
+import './App.css'; // ✅ Add this line
 
 function AppRoutes() {
   const [selectedDevices, setSelectedDevices] = useState({});
