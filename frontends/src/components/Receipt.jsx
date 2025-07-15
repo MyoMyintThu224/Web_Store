@@ -68,7 +68,8 @@ const Receipt = ({ selectedDevices, onBack }) => {
         </Table>
       </TableContainer>
 
-      <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: 4, gap: '14cm'}}>
+      {/*sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: 4, gap: '14cm'}}*/}
+        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 2 }}>
         <Button variant="outlined" color="secondary" onClick={handleBack} paddingLeft="5px">
           Back
         </Button>

@@ -35,13 +35,12 @@ export default function Login() {
 
   return (
     <div
-      className="h-screen flex items-center justify-center bg-blue-800"
+      className="h-screen flex items-center justify-center bg-blue-800 p-8 rounded shadow-md w-full max-w-md mx-auto px-4"
       style={{
         backgroundImage: `url(${reactLogo})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-      }}
-    >
+      }}>
       <div className="bg-white p-8 rounded shadow-md w-full max-w-md relative">
         <h1 className="text-7xl font-bold text-center mb-4 text-blue-600">Web Store</h1>
         <h2 className="text-2xl font-bold mb-6 text-center text-green-600">Login</h2>

@@ -1,171 +1,3 @@
-/*import React, { useEffect, useState } from "react";
-import { db, auth } from "../firebase";
-import {
-  collection,
-  addDoc,
-  query,
-  orderBy,
-  onSnapshot,
-  serverTimestamp,
-} from "firebase/firestore";
-import { onAuthStateChanged } from "firebase/auth";
-import {
-  FaFileAlt,
-  FaPaperPlane,
-  FaSmile,
-  FaPaperclip,
-} from "react-icons/fa";
-import EmojiPicker from "emoji-picker-react";
-
-export default function ChatBox() {
-  const [user, setUser] = useState(null);
-  const [text, setText] = useState("");
-  const [messages, setMessages] = useState([]);
-  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
-  const [file, setFile] = useState(null);
-  const [imagePreview, setImagePreview] = useState(null);
-
-  useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
-    return () => unsub();
-  }, []);
-
-  useEffect(() => {
-    const q = query(collection(db, "messages"), orderBy("createdAt"));
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      let msgs = [];
-      snapshot.forEach((doc) => {
-        msgs.push({ id: doc.id, ...doc.data() });
-      });
-      setMessages(msgs);
-    });
-
-    return () => unsubscribe();
-  }, []);
-
-  const handleSend = async () => {
-    if (text.trim() === "" && !file) return;
-
-    await addDoc(collection(db, "messages"), {
-      text,
-      uid: user.uid,
-      displayName: user.displayName,
-      photoURL: user.photoURL,
-      createdAt: serverTimestamp(),
-    });
-
-    setText("");
-    setFile(null);
-    setImagePreview(null);
-  };
-
-  const handleEmojiClick = (emoji) => {
-    setText((prev) => prev + emoji.emoji);
-    setShowEmojiPicker(false);
-  };
-
-  const handleFileChange = (e) => {
-    const selected = e.target.files[0];
-    setFile(selected);
-
-    if (selected && selected.type.startsWith("image/")) {
-      const reader = new FileReader();
-      reader.onloadend = () => setImagePreview(reader.result);
-      reader.readAsDataURL(selected);
-    } else {
-      setImagePreview(null);
-    }
-  };
-
-  return (
-    <div className="flex flex-col h-full">
-      //Messages
-      <div className="flex-1 overflow-y-auto bg-gray-700 p-4 space-y-2">
-        {messages.map((msg) => (
-          <div
-            key={msg.id}
-            className={`flex ${
-              msg.uid === user?.uid ? "justify-end" : "justify-start"
-            }`}
-          >
-            <div
-              className={`max-w-xs px-4 py-2 rounded-lg ${
-                msg.uid === user?.uid
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-300"
-              }`}
-            >
-              <p className="text-sm font-semibold">{msg.displayName}</p>
-              <p>{msg.text}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      //Emoji Picker
-      {showEmojiPicker && (
-        <div className="absolute bottom-20 left-4 z-10">
-          <EmojiPicker onEmojiClick={handleEmojiClick} />
-        </div>
-      )}
-
-      //Preview
-      {imagePreview && (
-        <div className="mb-2 px-4">
-          <img
-            src={imagePreview}
-            alt="preview"
-            className="w-32 rounded-lg shadow"
-          />
-        </div>
-      )}
-      {file && !imagePreview && (
-        <div className="mb-2 text-sm text-gray-700 flex items-center gap-2 px-4">
-          <FaFileAlt /> {file.name}
-        </div>
-      )}
-
-      //Input
-      <div className="p-4 bg-white border-t flex gap-2 items-center">
-        <button
-          onClick={() => setShowEmojiPicker((prev) => !prev)}
-          className="text-yellow-700 hover:text-gray-700"
-        >
-          <FaSmile size={20} />
-        </button>
-
-        <label className="text-gray-500 hover:text-gray-700 cursor-pointer">
-          <FaPaperclip size={20} />
-          <input
-            type="file"
-            onChange={handleFileChange}
-            className="hidden"
-            onKeyDown={(e) => e.key === "Enter" && handleSend()}
-          />
-        </label>
-
-        <input
-          type="text"
-          className="flex-1 border rounded px-4 py-2"
-          placeholder="Typing Message....."
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          onKeyDown={(e) => e.key === "Enter" && handleSend()}
-        />
-
-        <button
-          onClick={handleSend}
-          className="bg-blue-600 text-white px-4 py-2 rounded"
-        >
-          <FaPaperPlane size={20} />
-        </button>
-      </div>
-    </div>
-  );
-}*/
-// src/pages/ChatBox.jsx
 import React, { useEffect, useRef, useState } from "react";
 import { db, auth } from "../firebase";
 import {
@@ -287,9 +119,9 @@ export default function ChatBox() {
   };
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full max-h-screen w-full md:w-[500px] mx-auto">
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto bg-red-300 p-4 space-y-2">
+      <div className="flex-1 overflow-y-auto bg-green-200 p-4 space-y-2">
         {messages.map((msg, idx) => (
           <div
             key={msg.id}
@@ -299,11 +131,12 @@ export default function ChatBox() {
             ref={idx === messages.length - 1 ? scrollRef : null}
           >
             <div
-              className={`max-w-xs px-4 py-2 rounded-lg ${
+              className={`max-w-[80%] px-4 py-2 rounded-lg ${
                 msg.uid === user?.uid
                   ? "bg-blue-500 text-white"
                   : "bg-gray-300 text-black"
               }`}
+              style={msg.uid === user?.uid ? { marginRight: "0" } : {}}
             >
               <p className="text-sm font-semibold">{msg.displayName}</p>
               <p>{msg.text}</p>
